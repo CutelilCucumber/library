@@ -7,7 +7,7 @@ body {
 #header {
     display: flex;
     justify-content: space-around;
-    width: 100vw;
+    
     background-color: aquamarine;
     align-items: center;
 }
@@ -20,7 +20,24 @@ body {
 #cards {
     background-color: beige;
     height: 100vh;
-    width: 100vw;
     border-top: solid 3px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    padding-top: 7px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 2fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 10px;
 }
 
+.card {
+    background-color: rgb(177, 177, 177);
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    padding: 10px;
+    max-height: 500px;
+    text-align: center;
+}
+.card>img {
+    height: 200px;
+    width: 120px;
+}
