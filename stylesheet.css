@@ -4,7 +4,7 @@ body {
     flex-direction: column;
 }
 
-.header {
+#header {
     display: flex;
     justify-content: space-around;
     width: 100vw;
@@ -12,12 +12,12 @@ body {
     align-items: center;
 }
 
-.header>button {
+#header>button {
     height: 40px;
     border-radius: 5px;
 }
 
-.cards {
+#cards {
     background-color: beige;
     height: 100vh;
     width: 100vw;

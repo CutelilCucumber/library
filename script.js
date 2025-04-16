@@ -7,6 +7,7 @@ function Book(title, author, year, pages, read) {
     this.year = year;
     this.pages = pages;
     this.read = read;
+    this.display = false;
 }
 //unused info function
 // Book.info = function() {
@@ -24,9 +25,17 @@ function addBookToLibrary() {
 
 function displayBooks() {
     //loop through array and display books into a table or cards
-    for (const book in myLibrary) {
-        
-    }
+    for (const book in myLibrary) {//for each book in the array
+        if (book.display === false) {//only if not currently displayed
+            
+            let newElement = document.createElement('div');//create new card
+            newElement.classList.add('card');//add class card to it
+            document.getElementById('cards').appendChild(newElement);//append card to cards
+            
+
+
+            book.display = true;
+    }}
 }
 
 function removeBook() {
@@ -36,4 +45,5 @@ function removeBook() {
 //manual books for design
 const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 1937, 310, false);
 const IT = new Book('IT', 'Stephen King', 1986, 1138, false);
-myLibrary.push(theHobbit, IT);
+const howToFriends = new Book('How to Win Friends and Influence People', 'Dale Carnegie', 1937, 291, true);
+myLibrary.push(theHobbit, IT, howToFriends);
