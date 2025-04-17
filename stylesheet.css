@@ -16,16 +16,27 @@ body {
     height: 40px;
     border-radius: 5px;
 }
+#submit, #close {
+    margin-top: 5px;
+    margin-right: 5px;
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input:invalid {
+    outline: 2px solid red;
+    background-color: ivory;
+}
 #cards {
-    background-color: beige;
-    height: 100vh;
-    border-top: solid 3px rgba(0, 0, 0, 0.2);
+    border-top: solid 3px rgba(0, 0, 0, 0.15);
     padding: 10px;
     padding-top: 7px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(235px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
     grid-template-rows: repeat(auto-fit, 1fr);
     gap: 10px;
 }
@@ -36,8 +47,13 @@ body {
     padding: 10px;
     max-height: 500px;
     text-align: center;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 .card>img {
+    margin-top: 20px;
     height: 200px;
     width: 120px;
 }

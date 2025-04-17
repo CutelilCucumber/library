@@ -10,11 +10,26 @@
 <body>
     <div id="header">
         <h1>My Library</h1>
-        <button>Add Book</button>
+        <button data-open-modal>Add Book</button>
+
+        <dialog data-modal>
+            <form id="modal">
+                <title>New Book</title>
+                <label for="newTitle">Book title: *</label><input type="text" name="newTitle" id="newTitle" required/>
+                <label for="newRead">Have you read it?</label><input type="checkbox" name="newRead" id="newRead"/>
+                <label for="newAuthor">Author:</label><input type="text" name="newAuthor" id="newAuthor"/>
+                <label for="newYear">Year published:</label><input type="number" name="newYear" id="newYear"/>
+                <label for="newPages">Number of pages:</label><input type="number" name="newPages" id="newPages"/>
+                <label for="newCover">Cover photo: (url)</label><input type="url" name="newCover" id="newCover"/>
+                
+                <button type="submit" id="submit">Submit</button>
+                <button type="submit" formmethod="dialog" id="close" formnovalidate>Close</button>
+            </form>
+        </dialog>
     </div>
     <div id="cards">
         
     </div>
-    
+
 </body>
 </html>
